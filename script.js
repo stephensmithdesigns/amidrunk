@@ -211,19 +211,19 @@ console.log(ageMark);
 ///////////////////////////////////////
 // Function Practice: Function to Calculate How Drunk You Are
 
+function shouldIDriveHome() {
 
+  var drinks = prompt("Please tell me how many drinks you have had");
 
-
-var drinks = prompt("Please tell me how many drinks you have had");
-
-
-function shouldIDriveHome(drinks) {
-
-  if(drinks == 1) {
-    console.log('You Can Drive');
+  if(drinks < 1) {
+    console.log('You are sober, the designated driver, and the real hero today');
+    document.getElementById("answer").innerHTML =
+        "You are sober, the designated driver, and the real hero today";
   }
-  else if(drinks == 2) {
-    console.log('You Can Probably Still Drive');
+  else if(drinks == 1) {
+    console.log('You Can Drive');
+    document.getElementById("answer").innerHTML =
+        "You have only had " + drinks + "drink so you can drive.";
   }
   else if(drinks == 3) {
     console.log('Depending On Your Tolerance, you might be able to drive');
@@ -241,5 +241,3 @@ function shouldIDriveHome(drinks) {
     console.log('Whoever is reading this: grab a fucking Lyft and go home. Also, drink some water.');
   }
 }
-
-shouldIDriveHome(drinks);
