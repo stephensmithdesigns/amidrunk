@@ -223,21 +223,31 @@ function shouldIDriveHome() {
   else if(drinks == 1) {
     console.log('You Can Drive');
     document.getElementById("answer").innerHTML =
-        "You have only had " + drinks + "drink so you can drive.";
+        "You have only had " + drinks + " drink so you can drive.";
+  }
+  else if(drinks == 2) {
+    console.log('Depending On Your Tolerance, you might be able to drive');
+    document.getElementById("answer").innerHTML =
+        "You have had " + drinks + " drinks so, you are probably starting to get tipsy if you are a light-weight. You can probably drive though.";
   }
   else if(drinks == 3) {
-    console.log('Depending On Your Tolerance, you might be able to drive');
+    console.log('I think you might be able to drive home if you wait for an hour or so and drink some water.');
+    document.getElementById("answer").innerHTML =
+        "I think after having " + drinks + " you might be able to drive home if you wait for an hour or so and drink some water.";
   }
   else if(drinks == 4) {
-    console.log('I think you might be able to drive home if you wait for an hour or so and drink some water.');
+    console.log('I\'d consider taking a Lyft or going with the designated driver at this point. You are drunk.');
+    document.getElementById("answer").innerHTML =
+        "After " + drinks + " drinks, you are definitely not sober, and should either take a Lyft or find your designated driver.";
   }
   else if(drinks == 5) {
-    console.log('I\'d consider taking a Lyft or going with the DD at this point. You are drunk.');
-  }
-  else if(drinks == 6) {
     console.log('Let\'s be honest. You are pretty drunk. So enjoy it, Just don\'t drive');
+    document.getElementById("answer").innerHTML =
+        "Let's be honest, with " + drinks + " drinks you are drunk. So enjoy it, just don't drive";
   }
   else {
     console.log('Whoever is reading this: grab a fucking Lyft and go home. Also, drink some water.');
+    document.getElementById("answer").innerHTML =
+        "Whoever is reading this: grab a fucking Lyft and go home. Also, drink some water.";
   }
 }
